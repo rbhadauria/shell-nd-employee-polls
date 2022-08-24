@@ -1,0 +1,21 @@
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inline {
+  width: 100%;
+}
+
+.btn-primary {
+  color: white;
+  background-color: green;
+}
+
+.btn-outline {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+}

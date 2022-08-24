@@ -1,0 +1,12 @@
+.avatar-container {
+  display: flex;
+}
+
+.avatar-container .user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.avatar-container .user-id {
+  font-size: 12px;
+  font-weight: 400;
+}

@@ -1,0 +1,18 @@
+.poll-container {
+  border: 2px solid gainsboro;
+  margin-bottom: 15px;
+}
+
+.poll-container-title {
+  border-bottom: 2px solid gainsboro;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 0;
+}
+
+.poll-container-area {
+  gap: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+}

@@ -1,0 +1,17 @@
+.poll-summary-container {
+  border: 2px solid gainsboro;
+  padding: 10px;
+  min-height: 100px;
+}
+.poll-summary-author {
+  font-size: larger;
+  font-weight: 500;
+}
+.poll-summary-timestamp {
+  padding-bottom: 10px;
+  font-size: small;
+}
+.poll-summary-action {
+  padding: 10px;
+  border: 1px solid gainsboro;
+}

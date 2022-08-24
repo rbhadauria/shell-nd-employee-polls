@@ -1,0 +1,16 @@
+.table {
+  border: 2px solid gainsboro;
+  border-spacing: unset;
+  width: 100%;
+  text-align: left;
+}
+
+.thead {
+  background-color: #f2eeee;
+}
+
+td,
+th {
+  border: 1px solid gainsboro;
+  padding: 15px;
+}

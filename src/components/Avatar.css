@@ -1,0 +1,16 @@
+.small {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.medium {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.large {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
