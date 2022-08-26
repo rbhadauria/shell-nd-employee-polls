@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { login } from '../actions/auth';
@@ -15,6 +15,16 @@ const Login = (props) => {
   const usernameRef = createRef();
   const passwordRef = createRef();
 
+  useEffect(() => {
+    if (authedUser) {
+      if (location.state && location.state.from) {
+        return navigate(location.state.from);
+      } else {
+        return navigate('/');
+      }
+    }
+  }, [authedUser, navigate, location.state]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const username = usernameRef.current.value;
@@ -22,13 +32,6 @@ const Login = (props) => {
     login({ username, password });
   };
 
-  if (authedUser) {
-    if (location.state && location.state.from) {
-      navigate(location.state.from);
-    } else {
-      navigate('/');
-    }
-  }
   return (
     <div className="login-container">
       <div className="content">

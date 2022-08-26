@@ -1,4 +1,4 @@
-import { createRef, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addQuestion } from '../actions/questions';
@@ -11,8 +11,11 @@ const NewPoll = () => {
   const optionOneRef = createRef();
   const optionTwoRef = createRef();
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (questionAdded) navigate('/');
+  }, [questionAdded, navigate]);
 
   const handleSaveQuestion = (e) => {
     e.preventDefault();
@@ -23,7 +26,6 @@ const NewPoll = () => {
     });
   };
 
-  if (questionAdded) navigate('/');
   return (
     <div className="new-poll-container">
       <p className="text">Would You Rather</p>

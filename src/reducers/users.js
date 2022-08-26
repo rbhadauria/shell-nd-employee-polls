@@ -1,4 +1,4 @@
-import { SAVE_QUESTION_ANSWER } from '../actions/questions';
+import { ADD_QUESTION, SAVE_QUESTION_ANSWER } from '../actions/questions';
 import { ALL_USERS } from '../actions/users';
 
 const initialState = {
@@ -20,6 +20,19 @@ const usersReducer = (state = initialState, action) => {
             ...users[authedUser].answers,
             [qid]: answer,
           },
+        },
+      };
+      return { ...state, users };
+    }
+    case ADD_QUESTION: {
+      debugger;
+      const { author, id } = action.payload;
+      let users = state.users;
+      users = {
+        ...users,
+        [author]: {
+          ...users[author],
+          questions: users[author].questions.concat(id),
         },
       };
       return { ...state, users };
